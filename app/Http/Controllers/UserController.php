@@ -13,6 +13,6 @@ class UserController extends Controller
         $clone =  clone $user;
         $user->name = "arvind";
         $user->save();
-        return ['user' => $user->name, "clone" => $clone->name];
+        return ['user' => ucfirsts($user->name), "clone" => $clone->name];
     }
 }
